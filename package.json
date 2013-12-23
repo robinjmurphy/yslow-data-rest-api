@@ -3,6 +3,9 @@
   "version": "0.1.1",
   "description": "REST API for storing YSlow performance data",
   "main": "index.js",
+  "bin": {
+    "yslow-data-rest-api": "./bin/yslow-data-rest-api"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/robinjmurphy/yslow-data-rest-api.git"
