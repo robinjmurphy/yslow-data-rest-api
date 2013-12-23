@@ -1,0 +1,27 @@
+{
+  "name": "yslow-data-rest-api",
+  "version": "0.1.0",
+  "description": "REST API for storing YSlow performance data",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robinjmurphy/yslow-data-rest-api.git"
+  },
+  "keywords": [
+    "yslow",
+    "web",
+    "performance",
+    "beacon"
+  ],
+  "author": "robin@robinmurphy.co.uk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robinjmurphy/yslow-data-rest-api/issues"
+  },
+  "homepage": "https://github.com/robinjmurphy/yslow-data-rest-api",
+  "dependencies": {
+    "commander": "~2.1.0",
+    "express": "~3.4.7",
+    "chalk": "~0.4.0"
+  }
+}

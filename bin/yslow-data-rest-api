@@ -1,0 +1,13 @@
+#! /usr/bin/env node
+
+var program = require('commander');
+var chalk = require('chalk');
+var app = require('..');
+
+program
+  .option('-H, --host <host>', 'specify the host [0.0.0.0]', '0.0.0.0')
+  .option('-p, --port <port>', 'specify the port [3000]', '3000')
+  .parse(process.argv);
+
+app.listen(program.port, program.host);
+console.log('Listening on:', chalk.yellow(program.host + ':' + program.port));
