@@ -22,6 +22,7 @@
   "dependencies": {
     "commander": "~2.1.0",
     "express": "~3.4.7",
-    "chalk": "~0.4.0"
+    "chalk": "~0.4.0",
+    "yslow-data-service": "~0.1.0"
   }
 }
