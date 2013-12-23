@@ -4,15 +4,12 @@ var results = require('./lib/results');
 var urls = require('./lib/urls');
 var app = express();
 
-/**
- * Middleware.
- */
+// middleware
+app.use(express.logger());
 app.use(express.json());
 app.use(express.urlencoded());
 
-/**
- * Routing.
- */
+// routing
 app.post('/beacon', beacon.create);
 app.get('/results', results.all);
 app.del('/results', results.removeAll);
@@ -21,9 +18,7 @@ app.get('/results/:id', results.get);
 app.del('/results/:id', results.remove);
 app.get('/urls', urls.all);
 
-/**
- * 404 (if we got this far then no routes were matched.)
- */
+// 404 (if we got this far then no routes were matched.)
 app.use(function (req, res, next) {
   var err = new Error('Resource not found: ' + req.path);
 
@@ -31,9 +26,7 @@ app.use(function (req, res, next) {
   next(err);
 });
 
-/**
- * Error handling.
- */
+// error handling
 app.use(function (err, req, res, next) {
   var status = err.status || 500;
   console.error(err.stack);
