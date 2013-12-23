@@ -54,9 +54,11 @@ Feature: Results
     And the response body JSON should be
       """
         {
-          "error": {
-            "message": "Result with ID 123 could not be found"
-          }
+          "errors": [
+            {
+              "message": "Result with ID 123 could not be found"
+            }
+          ]
         }
       """
 

@@ -7,8 +7,10 @@ Feature: 404
     And the response body JSON should be
       """
         {
-          "error": {
-            "message": "Resource not found: /blablabla"
-          }
+          "errors": [
+            {
+              "message": "Resource not found: /blablabla"
+            }
+          ]
         }
       """

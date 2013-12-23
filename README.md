@@ -32,21 +32,23 @@ phantomjs yslow.js -b http://localhost:3000/beacon -i basic http://www.bbc.co.uk
 Head to http://localhost:3000/results to see the test results:
 
 ```json
-[
-  {
-    "id": "52b887a7e486520836000003",
-    "timestamp": "2013-12-23T18:57:43.216Z",
-    "data": {
-      "v": "3.1.8",
-      "w": 510283,
-      "o": 76,
-      "u": "http://www.bbc.co.uk/",
-      "r": 87,
-      "i": "ydefault",
-      "lt": 1706
+{
+  "results": [
+    {
+      "id": "52b887a7e486520836000003",
+      "timestamp": "2013-12-23T18:57:43.216Z",
+      "data": {
+        "v": "3.1.8",
+        "w": 510283,
+        "o": 76,
+        "u": "http://www.bbc.co.uk/",
+        "r": 87,
+        "i": "ydefault",
+        "lt": 1706
+      }
     }
-  }
-]
+  ]
+}
 ```
 
 ### Configuration
@@ -79,6 +81,26 @@ curl -i -X POST -H "Content-Type: application/json" -d '{"v": "3.1.8", "w": 5102
 HTTP/1.1 201 Created
 Location: /results/52b88a9ca7b09dcc36000001
 ```
+
+```json
+{
+  "results": [
+    {
+      "id": "52b8c2bc1544b91d5a000001",
+      "timestamp": "2013-12-23T23:09:48.626Z",
+      "data": {
+        "v": "3.1.8",
+        "w": 510283,
+        "o": 76,
+        "u": "http://www.bbc.co.uk/",
+        "r": 87,
+        "i": "ydefault",
+        "lt": 1706
+      }
+    }
+  ]
+}
+```
 ---
 ### `GET /results`
 
@@ -92,7 +114,7 @@ Returns stored results
 #### Example request
 
 ```bash
-curl -i "http://localhost:3000/results?url=http://www.bbc.co.uk?limit=5"
+curl -i "http://localhost:3000/results?url=http://www.bbc.co.uk/&limit=5"
 ```
 
 #### Example response
@@ -103,21 +125,23 @@ Content-Type: application/json; charset=utf-8
 ```
 
 ```json
-[
-  {
-    "id": "52b88b49a3d2f8fd36000001",
-    "timestamp": "2013-12-23T19:13:13.516Z",
-    "data": {
-      "v": "3.1.8",
-      "w": 512402,
-      "o": 76,
-      "u": "http://www.bbc.co.uk/",
-      "r": 90,
-      "i": "ydefault",
-      "lt": 1825
+{
+  "results": [
+    {
+      "id": "52b8c26e6a9782d25900001a",
+      "timestamp": "2013-12-23T23:08:30.229Z",
+      "data": {
+        "v": "3.1.8",
+        "w": "538060",
+        "o": "76",
+        "u": "http://www.bbc.co.uk",
+        "r": "88",
+        "i": "ydefault",
+        "lt": "1883"
+      }
     }
-  }
-]
+  ]
+}
 ```
 ---
 ### `DELETE /results`
@@ -148,17 +172,21 @@ curl -i http://localhost:3000/results/52b88c58a3d2f8fd36000004
 
 ```json
 {
-  "id": "52b88c58a3d2f8fd36000004",
-  "timestamp": "2013-12-23T19:17:44.822Z",
-  "data": {
-    "v": "3.1.8",
-    "w": 789301,
-    "o": 82,
-    "u": "http://www.bbc.co.uk/weather/",
-    "r": 48,
-    "i": "ydefault",
-    "lt": 2111
-  }
+  "results": [
+    {
+      "id": "52b8c26e6a9782d25900001a",
+      "timestamp": "2013-12-23T23:08:30.229Z",
+      "data": {
+        "v": "3.1.8",
+        "w": "538060",
+        "o": "76",
+        "u": "http://www.bbc.co.uk",
+        "r": "88",
+        "i": "ydefault",
+        "lt": "1883"
+      }
+    }
+  ]
 }
 ```
 ---
@@ -188,7 +216,7 @@ Returns the latest result
 #### Example request
 
 ```bash
-curl -i "http://localhost:3000/results/latest?url=http://www.bbc.co.uk/weather/"
+curl -i "http://localhost:3000/results/latest?url=http://www.bbc.co.uk"
 ```
 
 #### Example response
@@ -200,17 +228,21 @@ Content-Type: application/json; charset=utf-8
 
 ```json
 {
-  "id": "52b88c58a3d2f8fd36000004",
-  "timestamp": "2013-12-23T19:17:44.822Z",
-  "data": {
-    "v": "3.1.8",
-    "w": 789301,
-    "o": 82,
-    "u": "http://www.bbc.co.uk/weather/",
-    "r": 48,
-    "i": "ydefault",
-    "lt": 2111
-  }
+  "results": [
+    {
+      "id": "52b8c4c2c4dea4fb5c00001b",
+      "timestamp": "2013-12-23T23:18:26.710Z",
+      "data": {
+        "v": "3.1.8",
+        "w": "538060",
+        "o": "76",
+        "u": "http://www.bbc.co.uk",
+        "r": "88",
+        "i": "ydefault",
+        "lt": "1883"
+      }
+    }
+  ]
 }
 ```
 ---
@@ -232,8 +264,10 @@ Content-Type: application/json; charset=utf-8
 ```
 
 ```json
-[
-  "http://www.bbc.co.uk/weather/",
-  "http://www.bbc.co.uk/news/"
-]
+{
+  "urls": [
+    "http://www.bbc.co.uk/weather/",
+    "http://www.bbc.co.uk/news/"
+  ]
+}
 ```

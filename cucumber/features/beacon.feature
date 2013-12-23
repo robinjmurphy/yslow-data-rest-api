@@ -16,3 +16,4 @@ Feature: Beacon
       """
     Then the response code should be 201
     And the 'Location' header should point to the newly created result
+    And I should see the result

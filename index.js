@@ -30,7 +30,7 @@ app.use(function (req, res, next) {
 app.use(function (err, req, res, next) {
   var status = err.status || 500;
   console.error(err.stack);
-  res.json(status, { error: { message: err.message } });
+  res.json(status, { errors: [{ message: err.message }] });
 });
 
 module.exports = app;

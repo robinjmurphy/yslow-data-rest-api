@@ -15,7 +15,7 @@ end
 def send_beacon_request(test_data)
   @response = Server.post('/beacon', test_data.to_json)
   result = Server.get(@response.headers[:location])
-  @id = JSON.parse(result.body)["id"]
+  @id = JSON.parse(result.body)["results"][0]["id"]
 end
 
 Given(/^I have sent (\d+) results? to the beacon end\-point$/) do |number|
