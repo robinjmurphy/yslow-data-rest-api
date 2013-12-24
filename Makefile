@@ -7,4 +7,4 @@ start-server:
 test:
 	cd cucumber && bundle exec cucumber
 
-PHONY: test, install, start-server
+.PHONY: test install start-server
