@@ -1,5 +1,7 @@
 # yslow-data-rest-api
 
+[![Code Climate](https://codeclimate.com/github/robinjmurphy/yslow-data-rest-api.png)](https://codeclimate.com/github/robinjmurphy/yslow-data-rest-api)
+
 A REST API for storing web performance data from [YSlow](http://yslow.org).
 
 It receives test results using YSlow's [beacon mechanism](http://yslow.org/user-guide/#yslow_beacon) and makes them available through a JSON API. Data is persisted to [MongoDB](http://www.mongodb.org/) with the [yslow-data-service](https://github.com/robinjmurphy/yslow-data-service) package.
