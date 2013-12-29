@@ -134,12 +134,12 @@ Content-Type: application/json; charset=utf-8
       "timestamp": "2013-12-23T23:08:30.229Z",
       "data": {
         "v": "3.1.8",
-        "w": "538060",
-        "o": "76",
+        "w": 538060,
+        "o": 76,
         "u": "http://www.bbc.co.uk",
-        "r": "88",
+        "r": 88,
         "i": "ydefault",
-        "lt": "1883"
+        "lt": 1883
       }
     }
   ]
@@ -180,12 +180,12 @@ curl -i http://localhost:3000/results/52b88c58a3d2f8fd36000004
       "timestamp": "2013-12-23T23:08:30.229Z",
       "data": {
         "v": "3.1.8",
-        "w": "538060",
-        "o": "76",
+        "w": 538060,
+        "o": 76,
         "u": "http://www.bbc.co.uk",
-        "r": "88",
+        "r": 88,
         "i": "ydefault",
-        "lt": "1883"
+        "lt": 1883
       }
     }
   ]
@@ -236,12 +236,12 @@ Content-Type: application/json; charset=utf-8
       "timestamp": "2013-12-23T23:18:26.710Z",
       "data": {
         "v": "3.1.8",
-        "w": "538060",
-        "o": "76",
+        "w": 538060,
+        "o": 76,
         "u": "http://www.bbc.co.uk",
-        "r": "88",
+        "r": 88,
         "i": "ydefault",
-        "lt": "1883"
+        "lt": 1883
       }
     }
   ]

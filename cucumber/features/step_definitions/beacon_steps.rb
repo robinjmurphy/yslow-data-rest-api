@@ -3,12 +3,12 @@ require 'rest-client'
 def test_data(url = "http://www.example.com")
   return {
     v: "3.1.8",
-    w: "538060",
-    o: "76",
+    w: 538060,
+    o: 76,
     u: CGI.escape(url),
-    r: "88",
+    r: 88,
     i: "ydefault",
-    lt: "1883"
+    lt: 1883
   }
 end
 
