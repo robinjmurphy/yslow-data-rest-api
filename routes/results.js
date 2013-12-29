@@ -5,6 +5,7 @@ module.exports = {
   /**
    * GET /results
    */
+
   all: function (req, res, next) {
     var options = {};
     var limit = req.query.limit;
@@ -23,6 +24,7 @@ module.exports = {
   /**
    * GET /results/latest
    */
+
   latest: function (req, res, next) {
     var options = {};
     var url = req.query.url;
@@ -45,6 +47,7 @@ module.exports = {
   /**
    * GET /results/:id
    */
+
   get: function (req, res, next) {
     var id = req.params.id;
 
@@ -63,6 +66,7 @@ module.exports = {
   /**
    * DELETE /results/:id
    */
+
   remove: function (req, res, next) {
     var id = req.params.id;
 
@@ -76,6 +80,7 @@ module.exports = {
   /**
    * DELETE /results
    */
+
   removeAll: function (req, res, next) {
     service.results.removeAll(function (err) {
       if (err) return next(err);

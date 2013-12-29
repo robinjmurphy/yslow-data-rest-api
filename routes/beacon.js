@@ -5,6 +5,7 @@ module.exports = {
   /**
    * POST /beacon
    */
+
   create: function (req, res, next) {
     var data = req.body;
 
